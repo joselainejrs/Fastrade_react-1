@@ -4,6 +4,8 @@ import Localizacao from '../../assets/img/Agrupar.png';
 import Logotipo from '../../assets/img/FONTE-1.png';
 
 function Rodape() {
+
+    
     return (
         <div>
             <footer className="rodapePrincipal">
