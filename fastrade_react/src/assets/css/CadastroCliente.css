@@ -5,85 +5,6 @@
     padding: 0;
 }
 
-header {
-    background-color: rgba(218, 165, 32, 0.78);
-    padding: 25px 0px;
-}
-
-.container {
-    width: 1200px;
-    margin: auto;
-}
-
-.sub_menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav {
-    padding-top: 10px;
-}
-
-nav ul {
-    display: flex;
-    padding: 10px;
-    justify-content: space-around;
-}
-
-nav a {
-    text-decoration: none;
-    color: #000000;
-    font-family: 'Dosis', sans-serif;
-}
-
-nav li {
-    list-style: none;
-    font-size: 18px;
-}
-
-.pesquisa {
-    background-color: white;
-    border-radius: 10px;
-    width: 300px;
-}
-
-.txt_busca {
-    float: left;
-    background-color: transparent;
-    padding-left: 5px;
-    font-size: 18px;
-    border: none;
-    height: 32px;
-    width: 260px;
-}
-.btn_busca {
-    width: 20px;
-    height: 20px;
-    margin-top: 5px;
-}
-
-footer {
-    background-color: white;
-    font-family: 'Roboto', sans-serif;
-}
-
-.contato {
-    line-height: 1.5;
-}
-
-.localizacao {
-    width: 400px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.todo {
-    padding: 30px 0px;
-    display: flex;
-    justify-content: space-between;
-}
 
 .card {
     width: 1000px;
@@ -99,8 +20,24 @@ footer {
   justify-content: center;
 }
 
+.tipodeusuario label    {
+    display: flex;
+    align-items: center;
 
-
+}
+.tipodeusuario{
+    display: flex !important;
+    flex-direction: row !important;
+    width: 100%;
+    justify-content: space-around;
+}
+.direito{
+    width: 50%;
+    align-items: center;
+}
+.esquerdo{
+    width: 50%;
+}
 
 #form_cadastro div span{
     width: 120px;
@@ -110,6 +47,11 @@ footer {
 #form_cadastro div{
     margin: 10px;
 }
+.botao{
+    width: 50%;
+    }
+
+
 
  button {
      width: 50%;
@@ -125,7 +67,7 @@ footer {
     border-radius: 20px;
  }
  label{
-     width: 100%;
+     width: 50%;
      margin-bottom: 10px;
  }
  .card input {
@@ -159,10 +101,14 @@ footer {
     flex-direction: column;
 }
 .card input{
-    height: 50px;
+    height: 40px;
     border-style: 1px outset #707070;
 
 }
+.radio{
+    height: 20px !important;
+}
+
 /*Medias Queries*/
 
 @media(max-width:1169px) {
@@ -175,7 +121,6 @@ footer {
  
 }
 }
-
 /*Smart*/
 
 @media(max-width:768px) {   
@@ -183,14 +128,6 @@ footer {
     .container {
         width: 350px;
         
-
-    }
-    .direito{
-        width: 350px;
-
-    }
-    .esquerdo{
-        width: 350px;
 
     }
     .card{
@@ -202,6 +139,6 @@ footer {
             flex-direction: column;
     
     }
-  
+
 
     }
