@@ -1,12 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import './assets/css/estilo.css'
 import * as serviceWorker from './serviceWorker';
 //Importamos as dependencias necessarias:
 import { Route, HashRouter as Router, Switch, Redirect } from 'react-router-dom';
-
 
 //importamos as paginas
 import App from './pages/Home/App';

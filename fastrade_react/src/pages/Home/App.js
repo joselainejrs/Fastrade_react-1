@@ -9,16 +9,17 @@ import ClientePng from '../../assets/img/cliente_home.png';
 import bannerFinal from '../../assets/img/img_2.png';
 import logoFinal from '../../assets/img/logo_img2.png';
 import CirculaPng from '../../assets/img/circulo_comentario.png';
+import Home from  '../../assets/css/Home.css'
 
 
-// import '../../assets/css/Home.css'
 class App extends Component {
   UNSAFE_componentWillMount() {
     console.log('Will');
   }
 
   componentDidMount() {
-    console.log('Did');
+    console.log('Carregado');
+    this.listaAtualizada();
   }
 
   componentDidUpdate() {
@@ -31,11 +32,16 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      listaNomeProduto: [
-        { Nome: "Design" }
-      ]
+      listaNomeProduto: [],
+
     }
 
+  }
+  listaAtualizada = () => {
+
+    fetch("https://localhost:5001/api/produto/")
+      .then(response => response.json())
+      .then(data => this.setState({ listaNomeProduto: data }));
   }
 
   render() {
@@ -52,24 +58,60 @@ class App extends Component {
             <p className="oferte">Produtos em ofertas</p>
             <div className="conteudo">
               <div className="alimentos">
-                
+
                 <img src={arroz} className="img_home" alt="Imagem de Arroz" />
-                <p className="descricao">Arroz Integral Rárus </p>
+                {/* <p className="descricao">Arroz Integral Rárus </p> */}
+                {
+                  this.state.listaNomeProduto.map(
+                    function (oferta) {
+                      return (
+                        <p>{oferta.nome}</p>
+                      );
+                    }
+                  )
+                }
                 <p className="vermelho">30%  Desconto</p>
-              </div>  
+              </div>
               <div className="alimentos">
                 <img src={arroz} className="img_home" alt="Imagem de Arroz" />
-                <p className="descricao">Arroz Integral Rárus </p>
+                {/* <p className="descricao">Arroz Integral Rárus </p> */}
+                {
+                  this.state.listaNomeProduto.map(
+                    function (oferta) {
+                      return (
+                        <p>{oferta.nome}</p>
+                      );
+                    }
+                  )
+                }
                 <p className="vermelho">30% Desconto</p>
               </div>
               <div className="alimentos">
                 <img src={arroz} className="img_home" alt="Imagem de Arroz" />
-                <p className="descricao">Arroz Integral Rárus </p>
+                {/* <p className="descricao">Arroz Integral Rárus </p> */}
+                {
+                  this.state.listaNomeProduto.map(
+                    function (oferta) {
+                      return (
+                        <p>{oferta.nome}</p>
+                      );
+                    }
+                  )
+                }
                 <p className="vermelho">30% Desconto</p>
               </div>
               <div className="alimentos">
                 <img src={arroz} className="img_home" alt="Imagem de Arroz" />
-                <p className="descricao">Arroz Integral Rárus </p>
+                {/* <p className="descricao">Arroz Integral Rárus </p> */}
+                {
+                  this.state.listaNomeProduto.map(
+                    function (oferta) {
+                      return (
+                        <p>{oferta.nome}</p>
+                      );
+                    }
+                  )
+                }
                 <p className="vermelho">30% Desconto</p>
               </div>
             </div>

@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
 .container_oferta{
 	width: 1200px;
   	margin: auto;
@@ -215,3 +222,192 @@
     padding-top: 5px;
 }
 
+
+/* tablete*/
+@media (max-width:1169px){
+	.banner_home{
+   		 width: 1169px; 
+		height: 300px;
+			
+	}
+	.container_oferta{
+		width: 1169px;
+		background-color: white;
+		
+    }
+    .frase_dicas{
+		font-size: 60px;
+    }
+    .img_frase{
+        width: 600px;
+        text-align: center;
+    }
+	.oferte{
+   		margin-left: 25%;
+			
+	}
+	.conteudo{
+		width: 1000px;
+		align-content: center;
+		display: flex;
+	}
+	.informativo{
+		font-size: 50px;
+		width: 800px;
+		margin-left: 10%;
+	}	
+	.alimentos{
+		width: 250px;
+	}	
+	
+	
+    
+}
+
+
+
+
+@media (max-width: 767px){
+	.banner_home{
+   		width: 500px; 
+		height: 250px;
+	}
+	.frase_dicas{
+		font-size: 40px;
+    }
+    .img_frase{
+        width: 300px;
+    }
+    .container_oferta{
+		width: 767px;
+		background-color: white;
+	}
+	.oferte{
+   		margin-left: 10%;
+		font-size: 30px;
+		width: 300px;
+	}
+	.conteudo{
+		width: 550px;
+			
+	}
+	.informativo{
+		font-size: 25px;
+		width: 450px;
+		margin-left: 20px;
+		
+	}	
+	
+	.alimentos{
+		width: 200px;
+			
+	}
+	.descricao{
+		font-size: 15px;
+		width: 100px;
+		
+	}
+	.vermelho{
+		font-size: 15px;
+		width: 100px;
+	}
+	.img_home{
+		width: 100px;
+		height: 150px;
+		margin:auto;
+		
+	}
+	.espaco_comentario{
+		display: flex;
+		flex-direction: column;
+	}
+	.img_comentario{
+		left: 12px;
+		position: relative;
+	}
+	.img_comentario2{
+		top: -200px;
+		position: relative;
+		left: 8px;
+}
+	.img_caixa{
+		top:-390px;
+		position: relative;
+		
+	}
+}
+
+
+
+
+
+@media (max-width: 767px){
+	.banner_home{
+   		width: 500px; 
+		height: 250px;
+	}
+	.frase_dicas{
+		font-size: 40px;
+    }
+    .img_frase{
+        width: 300px;
+    }
+    .container_oferta{
+		width: 767px;
+		background-color: white;
+		margin: ;
+	}
+	.oferte{
+   		margin-left: 10%;
+		font-size: 30px;
+		width: 300px;
+	}
+	.conteudo{
+		width: 550px;
+			
+	}
+	.informativo{
+		font-size: 25px;
+		width: 450px;
+		margin-left: 20px;
+		
+	}	
+	
+	.alimentos{
+		width: 200px;
+			
+	}
+	.descricao{
+		font-size: 15px;
+		width: 100px;
+		
+	}
+	.vermelho{
+		font-size: 15px;
+		width: 100px;
+	}
+	.img_home{
+		width: 100px;
+		height: 150px;
+		margin:auto;
+		
+	}
+	.espaco_comentario{
+		display: flex;
+		flex-direction: column;
+	}
+	.img_comentario{
+		left: 12px;
+		position: relative;
+	}
+	.img_comentario2{
+		top: -200px;
+		position: relative;
+		left: 8px;
+}
+	.img_caixa{
+		top:-390px;
+		position: relative;
+		
+	}
+}
