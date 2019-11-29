@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 //Importamos as dependencias necessarias:
-import { Route, HashRouter as Router, Switch, Redirect } from 'react-router-dom';
+import { Route, HashRouter as Router, Switch} from 'react-router-dom';
 
 //Importamos a pagina de cadastroProduto
 import cadastroProduto from './pages/cadastroProduto/cadastroProduto';
+import './assets/css/cadastroProduto.css';
 import NaoEncontrada from './pages/NaoEncontrada/NaoEncontrada';
 
 //Realizamos a criação de rotas
@@ -19,6 +21,7 @@ const Rotas = (
                 <Route exact path="/" component={App} />
                 <Route path="/cadastroProduto" component={cadastroProduto} />
                 <Route component ={NaoEncontrada} />
+         
             </div>
         </Switch>
     </Router>
