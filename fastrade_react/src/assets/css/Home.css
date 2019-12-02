@@ -10,7 +10,7 @@
   	margin: auto;
 }
 .tod_home{
-    background-image: url(../imagens/fundo.png);
+    background-image: url(../img/fundo.png);
     background-size: cover;
     background-position: right;
     background-repeat: no-repeat;
@@ -355,7 +355,6 @@
     .container_oferta{
 		width: 767px;
 		background-color: white;
-		margin: ;
 	}
 	.oferte{
    		margin-left: 10%;

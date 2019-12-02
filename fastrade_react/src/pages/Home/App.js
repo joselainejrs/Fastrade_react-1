@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+
+//Aqui importamos imagens
 import logo_banner from '../../assets/img/logo_banner.png';
 import arroz from '../../assets/img/arroz.png';
 import usuarioPng from '../../assets/img/usu_ario.png';
@@ -9,9 +11,11 @@ import ClientePng from '../../assets/img/cliente_home.png';
 import bannerFinal from '../../assets/img/img_2.png';
 import logoFinal from '../../assets/img/logo_img2.png';
 import CirculaPng from '../../assets/img/circulo_comentario.png';
+
+//importamos a css da home
 import Home from  '../../assets/css/Home.css'
 
-
+//Aqui temos o ciclo de vida!
 class App extends Component {
   UNSAFE_componentWillMount() {
     console.log('Will');
@@ -20,6 +24,7 @@ class App extends Component {
   componentDidMount() {
     console.log('Carregado');
     this.listaAtualizada();
+    this.listaAtualizadaImagem
   }
 
   componentDidUpdate() {
@@ -29,20 +34,29 @@ class App extends Component {
   componentWillUnmount() {
     console.log("Unmount")
   }
+
+  //declaramos um construtor com uma lista
   constructor() {
     super();
     this.state = {
       listaNomeProduto: [],
+      listaImagem:[]
 
     }
 
   }
+  // temos uma lista atualizada onde escolhemos qual produto ira aparecer
   listaAtualizada = () => {
-
-    fetch("https://localhost:5001/api/produto/")
+    fetch("https://localhost:5001/api/produto")
       .then(response => response.json())
       .then(data => this.setState({ listaNomeProduto: data }));
   }
+  listaAtualizadaImagem = () => {
+    fetch("https://localhost:5001/api/oferta/1")
+      .then(response => response.json())
+      .then(data => this.setState({ listaNomeProduto: data }));
+  }
+
 
   render() {
     return (
@@ -58,8 +72,14 @@ class App extends Component {
             <p className="oferte">Produtos em ofertas</p>
             <div className="conteudo">
               <div className="alimentos">
-
-                <img src={arroz} className="img_home" alt="Imagem de Arroz" />
+                
+                <img src={this.state.listaImagem.map(
+                  function(ii){
+                    return(
+                      <img src= {ii.fotoUrlOferta} />
+                    )
+                  }
+                )} className="img_home" alt="Imagem de Arroz" />
                 {/* <p className="descricao">Arroz Integral Rárus </p> */}
                 {
                   this.state.listaNomeProduto.map(
