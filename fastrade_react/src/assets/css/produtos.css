@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.contato {
+    line-height: 1.5;
+}
+
+.banner p {
+    width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    justify-content: space-between;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 53px;
+    position: relative;
+    left: 790px;
+    bottom: 120px;
+    color: white;
+}
+
+.banner{
+    height: 300px;
+}
+
+.banner_produtos {
+    background-image: url(../img/fundo.jpg);
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 298px;
+    display: flex;
+    margin: auto;
+}
+
+
+
+.container_lista {
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.busca {
+    font-size: 25px;
+    width: 350px;
+    font-family: 'Roboto', sans-serif;
+    padding: 50px;
+    margin-right: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ordenar {
+    border-bottom: 4px;
+    color: black;
+    width: 200px;
+}
+
+select {
+    height: 40px;
+}
+
+.container_cards {
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 250px;
+    height: 500px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 3.0;
+    margin-top: 50px;
+    box-shadow: 5px 6px 3px -3px rgba(205, 90, 76, 1);
+}
+
+.card:hover {
+    background-color: rgba(165, 162, 162, 0.808);
+}
+
+.card img {
+    height: 150px;
+    margin-top: 40px;
+    margin-left: 50px;
+}
+
+.btn_1 {
+    font-family: 'Roboto', sans-serif;
+    background-color: #BC3908;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    margin: 40px;
+    width: 200px;
+    font-size: 1.2em;
+    border-radius: 20px;
+    padding: 10px 30px;
+    border: none;
+}
+
+.produtor {
+    color: #DAA520;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+
+.card2 {
+    margin-top: 100px;
+}
+
+.vermais {
+    margin-top: 100px;
+    text-align: center;
+}
+
+@media (max-width:768px) {
+    .banner {
+        width: 100%;
+    }
+    .container_lista {
+        width: 100vw;
+    }
+    .container_cards {
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+    }
+    .card {
+        width: 270px;
+        margin: 50px;
+    }
+    .card2 {
+        display: none;
+    }
+    .img {
+        display: none;
+    }
+    .container_lista {
+        width: 90vw;
+    }
+    .banner p { 
+        display: none;
+    }
+    .busca {
+        margin: auto;
+    }
+}
