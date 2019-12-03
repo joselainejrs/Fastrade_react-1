@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 //Aqui importamos imagens
 import logo_banner from '../../assets/img/logo_banner.png';
-import arroz from '../../assets/img/arroz.png';
 import usuarioPng from '../../assets/img/usu_ario.png';
 import shopPng from '../../assets/img/shop.png';
 import negociarPng from '../../assets/img/nego_ciar.png';
@@ -12,8 +11,14 @@ import bannerFinal from '../../assets/img/img_2.png';
 import logoFinal from '../../assets/img/logo_img2.png';
 import CirculaPng from '../../assets/img/circulo_comentario.png';
 
+//
+
 //importamos a css da home
 import Home from '../../assets/css/Home.css'
+
+
+//Aqui importamos paginas
+
 
 //Aqui temos o ciclo de vida!
 class App extends Component {
@@ -51,7 +56,7 @@ class App extends Component {
       .then(data => this.setState({ listaNomeOferta: data }));
   }
 
-   
+
 
 
   render() {
@@ -67,22 +72,22 @@ class App extends Component {
           <div className="container_oferta">
             <p className="oferte">Produtos em ofertas</p>
             <div className="conteudo">
-              
-                
-                {
-                  this.state.listaNomeOferta.map(
-                    function (oferta) {
-                      return (
-                        <div className="alimentos">
-                          <img src={"http://localhost:5000/" + oferta.fotoUrlOferta} className="img_home" alt="Imagem de Arroz" />
-                          <p>{oferta.idProdutoNavigation.nome}</p>
-                          <p className="vermelho">30% Desconto</p>
-                        </div>
-                      );
-                    }
-                  )
-                }
-              
+
+
+              {
+                this.state.listaNomeOferta.map(
+                  function (oferta) {
+                    return (
+                      <div key={oferta.idOferta} className="alimentos">
+                        <img src={"http://localhost:5000/" + oferta.fotoUrlOferta} className="img_home" alt="Imagem de Arroz" />
+                        <p>{oferta.idProdutoNavigation.nome}</p>
+                        <p className="vermelho">30% Desconto</p>
+                      </div>
+                    );
+                  }
+                )
+              }
+
             </div>
           </div>
 
@@ -172,11 +177,11 @@ class App extends Component {
               <div><img src={CirculaPng} alt="" className="img_comentario" /></div>
               <div className="comentario1">
                 <a href="#"><p className="adm">Deixe seus comentários</p></a>
+
               </div>
             </div>
           </div>
         </main>
-
       </div>
     );
   }

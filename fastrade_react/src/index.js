@@ -7,6 +7,7 @@ import { Route, HashRouter as Router, Switch } from 'react-router-dom';
 
 //importamos ccs
 // import './assets/css/cadastroProduto.css';
+
 import './index.css';
 import './assets/css/estilo.css'
 
@@ -18,19 +19,16 @@ import Erro from './pages/paginaErro/Erro';
 //Criamos uma variavel que Realiza a criação das rotas:
 const Rotas = (
 	<Router>
+		<div>
 		<Switch>
-			{/* Definimos a rota para as pagina */}
-			<div>
 				<Route exact path="/" component={App} />
+				<Route path="/Home" component={App} />
 				<Route path="/cadastroProduto" component={cadastroProduto} />
-				<Route exact path="/" component={App} />
-				<Route exact path="/Home" component={App} />
+				<Route path="/cadastroProdutos" component={cadastroProduto} />
 				<Route component={Erro} />
-
-			</div>
 		</Switch>
+		</div>
 	</Router>
-
 )
 
 //Trocamos ao App padrão pelas nossas rotas
