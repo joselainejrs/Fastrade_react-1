@@ -34,17 +34,17 @@ class Bolo extends Component {
                         1 e ½ xícara (chá) de farinha de trigo;<br />
                         2 xícaras (chá) de casca de abóbora picada;<br />
                         2 xícaras (chá) de açúcar;<br />
-                        1 xícara (chá) de amido de milho;
-                        1 xícara (chá) de óleo;
+                        1 xícara (chá) de amido de milho; <br />
+                        1 xícara (chá) de óleo; <br />
                         3 ovos.<br />
                         
 
                         <h3>COBERTURA: </h3><br />
                         <br />
                         <p>
-                        4 colheres (sopa) de chocolate em pó;
-                        4 colheres (sopa) de açúcar;
-                        4 colheres (sopa) de leite. 
+                        4 colheres (sopa) de chocolate em pó; <br />
+                        4 colheres (sopa) de açúcar; <br />
+                        4 colheres (sopa) de leite.  <br />
                         </p>
                         </p>
                         <br />

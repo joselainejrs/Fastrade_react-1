@@ -46,12 +46,12 @@ class Pate extends Component {
                         1- Corte a parte verde dos alhos porós e lave bem, pois sempre tem terra 
                         acumulada entre as folhas. Descarte as folhas que estão secas;
                         refogar a cebola no óleo, até dourar.<br />
-                        Juntar as folhas picadas e o sal.
+                        Juntar as folhas picadas e o sal.<br />
                         2- Coloque numa panela de pressão e cubra com água. Adicione sal, 
                         tampe e cozinhe por 15 minutos, contados a partir do momento que a 
-                        panela começar a chiar. Quando terminar o tempo, desligue e deixe a pressão
+                        panela começar a chiar. Quando terminar o tempo, desligue e deixe a pressão <br />
                         3- Abra a panela e deixe a água amornar;<br />
-                        4- Em uma frigideira, aqueça o óleo e doure o alho picado;
+                        4- Em uma frigideira, aqueça o óleo e doure o alho picado; <br />
                         5- Coloque no liquidificador o alho poró, o alho dourado, e o 
                         sal e a pimenta do reino a gosto. Triture tudo até ficar homogêneo, 
                         caso necessário, adicione um pouco da água do cozimento para ajudar 

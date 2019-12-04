@@ -35,9 +35,9 @@ class Farofa extends Component {
                         4 colheres de sopa de cebola picada<br />
                         2 dentes de alho picado<br />
                         2 xícaras de chá de talos picados<br />
-                        2 xícaras de chá de suco de casca de abacaxi
-                        2 xícaras de chá de tomate picado
-                        4 xícaras de chá de farinha de mandioca e sal à gosto.
+                        2 xícaras de chá de suco de casca de abacaxi <br />
+                        2 xícaras de chá de tomate picado <br />
+                        4 xícaras de chá de farinha de mandioca e sal à gosto. <br />
                             
                         </p>
                         <br />
