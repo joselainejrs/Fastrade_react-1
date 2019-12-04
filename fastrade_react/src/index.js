@@ -6,15 +6,16 @@ import * as serviceWorker from './serviceWorker';
 import { Route, HashRouter as Router, Switch } from 'react-router-dom';
 
 //importamos ccs
-// import './assets/css/cadastroProduto.css';
-
-import './index.css';
-import './assets/css/estilo.css'
+// import './assets/css/cadastroProduto.css';'
+import './assets/css/login.css';
 
 //importamos as paginas
+import './assets/css/login.css';
 import App from './pages/Home/App';
 import cadastroProduto from './pages/cadastroProduto/cadastroProduto';
 import Erro from './pages/paginaErro/Erro';
+import Login from'./pages/Login/Login';
+
 
 //Criamos uma variavel que Realiza a criação das rotas:
 const Rotas = (
@@ -25,6 +26,7 @@ const Rotas = (
 				<Route path="/Home" component={App} />
 				<Route path="/cadastroProduto" component={cadastroProduto} />
 				<Route path="/cadastroProdutos" component={cadastroProduto} />
+				<Route path="/Login" component={Login}/>
 				<Route component={Erro} />
 		</Switch>
 		</div>
