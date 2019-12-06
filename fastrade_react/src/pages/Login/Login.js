@@ -132,7 +132,7 @@ class Login extends Component {
                                 <a href="https://pt-br.facebook.com/"><img className="botaolink" src={logoface} alt="Logar com facebook" /></a>
                                 <a
                                     href="https://accounts.google.com/signin/v2/identifier?hl=pt-BR&passive=true&continue=https%3A%2F%2Fwww.google.com.br%2F&flowName=GlifWebSignIn&flowEntry=ServiceLogin"><img
-                                        src={logogoogle} className="botaolink" alt="Logar com google" /></a>
+                                        src={logogoogle} className="botaolink" alt="Logar com google"/></a>
                             </div>
                         </form>
                     </div>

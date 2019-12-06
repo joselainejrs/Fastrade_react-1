@@ -1,41 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
-
 //Importamos as dependencias necessarias:
-import { Route, HashRouter as Router, Switch } from 'react-router-dom';
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 
 //importamos ccs
-// import './assets/css/cadastroProduto.css';'
+import './assets/css/quemSomos.css';
 import './assets/css/login.css';
+import './assets/css/produtos.css';
 
 //importamos as paginas
+import produtos from './pages/produtos/produtos';
 import './assets/css/login.css';
 import App from './pages/Home/App';
 import Dicas from './pages/Dicas/Dicas';
-
+import quemSomos from './pages/quemSomos/quemSomos';
 import Receitas from './pages/Receitas/receita';
-
 import Pudim from './pages/Receitas/Pudim';
-
 import Arroz from './pages/Receitas/Arroz';
-
 import Doce from './pages/Receitas/Doce';
-
-import Bolo from './pages/Receitas/Bolo';
-
-import Farofa from './pages/Receitas/Farofa';
-
 import Brigadeiro from './pages/Receitas/Brigadeiro';
-
-
+import Bolo from './pages/Receitas/Bolo';
+import Farofa from './pages/Receitas/Farofa';
 import Creme from './pages/Receitas/Creme';
-
-
 import Pate from './pages/Receitas/Pate';
-
 import cadastroProduto from './pages/cadastroProduto/cadastroProduto';
-
 import Erro from './pages/paginaErro/Erro';
 
 import Login from'./pages/Login/Login';
@@ -47,6 +36,7 @@ const Rotas = (
 		<div>
 			<Switch>
 				{/* Definimos a rota para as pagina */}
+				<Route exact path="/" component={App} />
 				<Route path="/pudim" component={Pudim} />
 				<Route path="/arroz" component={Arroz} />
 				<Route path="/Doce de Casca de Maracujá" component={Doce} />
@@ -63,6 +53,8 @@ const Rotas = (
 				<Route path="/cadastroProduto" component={cadastroProduto} />
 				<Route path="/cadastroProdutos" component={cadastroProduto} />
 				<Route path="/Login" component={Login}/>
+				<Route path="/quemSomos" component={quemSomos}/>
+                <Route exact path="/produtos" component={produtos}/>
 				<Route component={Erro} />
 			</Switch>
 		</div>
