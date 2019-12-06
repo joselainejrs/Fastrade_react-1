@@ -3,7 +3,11 @@ import '../../assets/css/footer.css';
 import Localizacao from '../../assets/img/Agrupar.png';
 import Logotipo from '../../assets/img/FONTE-1.png';
 
+<<<<<<< HEAD
 function Rodape() {
+=======
+function Rodape() {   
+>>>>>>> 50002fb246dcb365a098b0ca3f394ac7b278d1ae
     return (
         <div>
             <footer className="rodapePrincipal">
