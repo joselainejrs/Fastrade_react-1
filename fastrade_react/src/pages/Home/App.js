@@ -15,7 +15,8 @@ import CirculaPng from '../../assets/img/circulo_comentario.png';
 
 //importamos a css da home
 import Home from '../../assets/css/Home.css'
-
+import Rodape from '../../components/rodape/Rodape';
+import Cabecalho from '../../components/cabecalho/cabecalho';
 
 //Aqui importamos paginas
 
@@ -62,6 +63,7 @@ class App extends Component {
   render() {
     return (
       <div className="App" >
+      <Cabecalho {...this.props}/>
         <div className="tod_home">
           <p className="frase_dicas">
             Sem tempo para fazer Compras?<br />
@@ -181,6 +183,7 @@ class App extends Component {
               </div>
             </div>
           </div>
+          <Rodape/>
         </main>
       </div>
     );

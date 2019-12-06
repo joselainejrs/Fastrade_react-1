@@ -27,29 +27,29 @@ class Login extends Component {
 
         this.setState({ isLoading: true })
 
-        fetch("http://localhost:3000/api/login", {
+        fetch("https://localhost:5001/api/login", {
             method: "POST",
             body: JSON.stringify(
                 {
                     email: this.state.email,
-                    senha: this.state.senha
+                    senha: this.state.senha,
+
                 }),
             headers: {
                 "Content-Type": "application/json"
             }
         })
-            .then(response => response.json())
+
+            .then(response => response.json().then(data => ({ status: response.status, body: data })))
             .then(response => {
                 console.log(response);
-                this.listaAtualizada();
-                this.setState(() => ({ lista: this.state.lista }));
 
                 if (response.status === 200) {
-                    localStorage.setItem('usuario-fastrade', response.data.token)
+                    localStorage.setItem('usuario-fastrade', response.body.token)
                     this.setState({ isLoading: false })
 
                     // Exibe no console somente o token
-                    console.log("Meu token é: " + response.data.token)
+                    console.log("Meu token é: " + response.body.token)
 
                     // Define base64 recebendo o payload do token
                     var base64 = localStorage.getItem('usuario-fastrade').split('.')[1]
@@ -63,14 +63,15 @@ class Login extends Component {
                     console.log(JSON.parse(window.atob(base64)))
 
                     // Exibe no console o tipo de usuário logado
-                    console.log(parseJwt().Role)
+                     console.log("O seu tipo de id é ", parseJwt().Role)
 
-                    if (parseJwt().Role === 'Administrador') {
+                     //Caso o usuario seja um administrador ele vai para home
+                    if (parseJwt().Role === '3') {
                         //console.log(this.props)
                         this.props.history.push('/Home');
                     }
                     else {
-                        this.props.history.push('/Consumidor');
+                        this.props.history.push('/Dicas');
                     }
                 }
 
@@ -78,12 +79,12 @@ class Login extends Component {
 
             .catch(error => console.log(error))
 
-        if (parseJwt().Role === 'Administrador') {
-            this.props.history.push('/Home');
-        }
-        else {
-            this.props.history.push('/cadastrarProduto');
-        }
+        // if (parseJwt().Role === 'Administrador') {
+        //     this.props.history.push('/Home');
+        // }
+        // else {
+        //     this.props.history.push('/cadastrarProduto');
+        // }
     }
 
     atualizaEmail(input) {
