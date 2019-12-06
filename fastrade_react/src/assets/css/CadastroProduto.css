@@ -1,17 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Dosis&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 .styled-container {
-    width: 1000px;
-
+    width:1200px;
     background-color: white;
     padding: 80px 40px;
     margin: 40px 0px;
     border-radius: 4px;
-    -webkit-box-shadow: 5px 5px 30px -15px rgba(204, 204, 204, 1);
-    -moz-box-shadow: 5px 5px 30px -15px rgba(204, 204, 204, 1);
-    box-shadow: 5px 5px 30px -15px rgba(204, 204, 204, 1);
-  display: flex;
-  justify-content: center;
+    
     }
 
 .styled-container input{
@@ -19,8 +14,12 @@
     border-style: 1px outset #707070;
 
 }
-h1{
+.titulo_cadastro{
     font-family: 'Dosis', sans-serif;
+    margin-bottom: 40px;
+    font-size: 45px;
+    color:#BC3908;
+
 }
 
 .container{
@@ -28,14 +27,28 @@ h1{
     margin: auto;
     text-align: center;
 }
-.botao{
-    width: 51.56px;
-    height: 22px;
-    background-color: #BC3908;
-    color: #F6F0F0;
-    border-radius: 5px;
-    border:none;
-    margin-left: 10px;
+button.botao{
+    border: 0;	
+	background: none;
+	color:#BC3908;
+	font-family:'Dosis', sans-serif;
+	font-size: 20px;
+    font-weight: bold;
+    border: 1px solid #BC3908;
+    border-radius: 7px;
+    width: 100px;
+}
+button.botao:hover{
+   cursor: pointer; 
+   color: white;
+   background-color: #BC3908;
+}
+.buttons-area{
+
+    display: grid;
+    grid-template-columns: 110px 120px;
+    margin: auto;
+    width: 250px;
 }
 .botao2{
     background-color: #BC3908;
@@ -45,26 +58,11 @@ h1{
     width: 27.11;
     height: 22px;
 }
-
-.form-group{
+.conjunto{
     display: grid;
-    grid-template-columns: auto 3%;
-    grid-template-rows: 30% 30%;
+    grid-template-columns: 400px 300px 400px;
 }
-
-.form-group label{
-    grid-row: 1 / 2;
-    grid-column: 1 / 2;
-}
-
-.form-group .input-button{
-    grid-row: 2 / 3;
-    grid-column: 1 / 2;
-}
-
 .card {
-    width: 1000px;
-
     background-color: white;
     padding: 80px 40px;
     margin: 40px 0px;
@@ -72,28 +70,33 @@ h1{
     -webkit-box-shadow: 5px 5px 30px -15px rgba(204, 204, 204, 1);
     -moz-box-shadow: 5px 5px 30px -15px rgba(204, 204, 204, 1);
     box-shadow: 5px 5px 30px -15px rgba(204, 204, 204, 1);
-  
+    
 }
 
  .card input {
-    background-color: white;
-    border-radius: 8px;
+    margin-bottom: 30px;
+    border: 0;
     width: 300px;
-    height: 30px;
-    border: solid 1px black;
-    padding-left: 10px;
-    margin-bottom: 20px;
-    
-
+    height: 25px;
+	border-bottom: 2px solid #BC3908;
+	border-left: 2px solid #BC3908;
+	border-right: 2px solid #BC3908;
+	border-radius: 10px;
+	background: transparent;
+	color: black;
  }
 
 
  .card select{
-    background-color: white;
-    border-radius: 8px;
+    border: 0; 
     width: 300px;
-    height: 30px;
-    border: solid 1px black;
+    height: 25px;
+	border-bottom: 2px solid #BC3908;
+	border-left: 2px solid #BC3908;
+	border-right: 2px solid #BC3908;
+	border-radius: 10px;
+	background: transparent;
+	color: black;
     padding-left: 10px;
     margin-bottom: 20px;
  }
