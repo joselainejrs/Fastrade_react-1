@@ -14,7 +14,6 @@ import { Link } from 'react-router-dom';
 import pproduto from '../../assets/css/pproduto.css';
 
 //importamos as dependencias de Route
-import { Route, BrowserRouter as Router } from 'react-router-dom';
 
 
 
@@ -51,7 +50,6 @@ export default class PerfilProduto extends Component{
                         <form action="/action_page.php" class="usuario_produto">
                             <input type="text" name="firstname" value="R$ 10,00" className="descricao" />
                         </form>
-
                         <div className=" "><img src={Continuar} alt="Quer saber mais informações?" width="20px"/></div>
 
                         <div className="lixeira"><img src={Lixeira} alt="lixeira" width="20px"/></div>

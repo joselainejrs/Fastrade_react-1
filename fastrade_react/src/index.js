@@ -5,9 +5,11 @@ import * as serviceWorker from './serviceWorker';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 
 //importamos ccs
-import './assets/css/quemSomos.css';
-import './assets/css/login.css';
-import './assets/css/produtos.css';
+// import './assets/css/cadastroProduto.css';
+import './assets/css/dicas.css';
+import './assets/css/receita.css';
+import './assets/css/pproduto.css';
+
 
 //importamos as paginas
 import produtos from './pages/produtos/produtos';
@@ -51,10 +53,9 @@ const Rotas = (
 				<Route path="/Dica" component={Dicas} />
 				<Route path="/receitas" component={Receitas} />
 				<Route path="/cadastroProduto" component={cadastroProduto} />
-				<Route path="/cadastroProdutos" component={cadastroProduto} />
-				<Route path="/Login" component={Login}/>
-				<Route path="/quemSomos" component={quemSomos}/>
-                <Route exact path="/produtos" component={produtos}/>
+				<Route path="/PerfilComerciante" component={PerfilComerciante} />
+            	<Route path="/PerfilConsumidor" component={PerfilConsumidor} />
+            	<Route path="/PerfilProduto" component={PerfilProduto} />
 				<Route component={Erro} />
 			</Switch>
 		</div>
