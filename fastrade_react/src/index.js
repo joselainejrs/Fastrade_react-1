@@ -5,11 +5,7 @@ import * as serviceWorker from './serviceWorker';
 //Importamos as dependencias necessarias:
 import { Route, HashRouter as Router, Switch } from 'react-router-dom';
 
-//importamos ccs
-// import './assets/css/cadastroProduto.css';
 
-import './index.css';
-import './assets/css/estilo.css'
 
 //importamos as paginas
 import App from './pages/Home/App';
@@ -22,7 +18,7 @@ const Rotas = (
 		<div>
 		<Switch>
 				<Route exact path="/" component={App} />
-				<Route path="/Home" component={App} />
+				{/* <Route path="/Home" component={App} /> */}
 				<Route path="/cadastroProduto" component={cadastroProduto} />
 				<Route path="/cadastroProdutos" component={cadastroProduto} />
 				<Route component={Erro} />

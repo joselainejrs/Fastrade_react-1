@@ -1,9 +1,5 @@
 import React, {Component} from 'react';
-import '../../assets/css/cadastroProduto.css';
-import {Link} from 'react-router-dom';
-
-
-
+import '../../assets/css/CadastroProduto.css';
 
 
 class cadastroProduto extends Component{
@@ -11,37 +7,44 @@ class cadastroProduto extends Component{
     constructor(props){
         //Passamos o props para o componente com o super
         super(props);
+        this.state = {
+
+        listarProd:[],
 
         //Criamos um obj com o estado inicial do nosso form
-        this.stateInicial = {
             nomeProd:'',
             precoProd:'',
-            categoriaProd:'',
+            categoriaId:'',
             descProd:'',
-            valProd:'',
+            valProd:''
         }
-        //setamos o state com o StateInicial
-        this.state = this.stateInicial;
-    }
-    //a partir do event.target , pegaremos o name e o value do campo
-    escutadorDeInput = event =>{
-        const {name,value}= event.target;
-
-        //A cada evento disparado de mudança de input , queremos atualizar o estado do componente para que a mudança seja refletida na tela.Faremos isso por meio 
-        //do setState() , para a partir do name , colocar o value
-        this.setState({
-            [name]:value
-        })
-    }
-    //Método que irá a partir do props , chamar o escutadorDeSubmit
-    submitFormulario =() =>{
-        //Verificamos o retorno da chamada do método valida ,quando o botão salvar do formulario enviar as informações , adicionando um elemento na tela
-
-   
+      
     }
 
+    //Ciclo de vida 
+
+    componentDidMount(){
+        console.log('Carregado');
+        console.log(this.listarProd);
+        this.listarProdutos();
+    }
+
+            listarProdutos =() =>{
+                fetch('https://localhost:5001/api/Catproduto')
+                .then(response =>response.json())
+                .then(data => this.setState({ listarProd : data }))
+                .catch(error =>{
+                    console.log(error)
+                })
+            }
+
+
+    
     render(){
-        const{nomeProd,PrecoProd,descProd,valProd} = this.state;
+    
+    
+        
+        //  const{nomeProd,PrecoProd,descProd,valProd} = this.state;
         return(
             <div className="container">
             <div className="card">
@@ -55,7 +58,8 @@ class cadastroProduto extends Component{
                     id="nomeProd" 
                     type="text"
                     name = "NomeProd"
-                    value ={nomeProd}
+                   //  value ={nomeProd}
+                   // onChange ={this.escutadorDeInput}
                     />
                 </div>
             </div>
@@ -66,7 +70,8 @@ class cadastroProduto extends Component{
                     <input id="precoProd"
                      type="number"
                      name = "PrecoProd"
-                     value ={PrecoProd}
+                    //   value ={PrecoProd}
+                  //  onChange = {this.escutadorDeInput}
                      />
                 </div>
             </div>
@@ -74,11 +79,24 @@ class cadastroProduto extends Component{
             <div className="form-group">
                 <label htmlFor="catProd">Categoria do Produto</label>
                 <div className="input-button">
-                    <select>
-                        <option value="volvo">Grãos</option>
-                        <option value="saab">Enlatado</option>
-                        <option value="opel">Opel</option>
-                        <option value="audi">Audi</option>
+                    <select id ="descProd"
+                    name ="categoriaId"
+                    onChange ="">
+                        {
+                            this.state.listarProd.map(function(c){
+                                return(
+                                    
+                                    <option key ={c.idCatProduto} value={c.idCatProduto}>
+                                       {c.tipo}
+                                    </option>
+
+                                )
+                            })
+                        }
+                        {/* <option value="">Enlatado</option>
+                        <option value="">Opel</option>
+                        <option value="">Audi</option> */}
+                       
                       </select>
                    
                 </div>
@@ -91,7 +109,8 @@ class cadastroProduto extends Component{
                     <input id="descProd"
                      type="text"
                      name = "DescProd"
-                     value ={descProd}
+                    // value ={descProd}
+                   // onChange = {this.escutadorDeInput}
                      />
                 </div>
                 
@@ -103,7 +122,8 @@ class cadastroProduto extends Component{
                     <input id="valProd" 
                     type="date"
                     name ="ValProd"
-                    value ={valProd}
+                    // value ={valProd}
+                  //  onChange = {this.escutadorDeInput}
                     />
                 </div>
             </div>
