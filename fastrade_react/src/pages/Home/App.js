@@ -8,8 +8,6 @@ import negociarPng from '../../assets/img/nego_ciar.png';
 import documentoPng from '../../assets/img/document_home.png';
 import ClientePng from '../../assets/img/cliente_home.png';
 import bannerFinal from '../../assets/img/img_2.png';
-import logoFinal from '../../assets/img/logo_img2.png';
-import CirculaPng from '../../assets/img/circulo_comentario.png';
 
 //importa Link  
 import { Link } from 'react-router-dom';

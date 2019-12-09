@@ -5,6 +5,11 @@
     padding: 0;
 }
 
+.container_oferta{
+	width: 1200px;
+  	margin: auto;
+}
+    
 .localicate {
     width: 100px;
     margin-right: 50px;
