@@ -51,7 +51,7 @@ class App extends Component {
 
   }
   // temos uma lista atualizada onde escolhemos qual produto ira aparecer
-  listaAtualizada = () => {
+  listaAtualizada = () => { 
     fetch("https://localhost:5001/api/oferta")
       .then(response => response.json())
       .then(data => this.setState({ listaNomeOferta: data }));
@@ -108,7 +108,7 @@ class App extends Component {
               <div className="global_informativa">
                 <div className="caixa_informativa">
                   <div><img src={shopPng} alt="Imagem de shopping" className="img_informativa" /></div>
-                  <div className="frase_informativa"><p> Visite nossa página produtos de produtos. E aproveite para comprar!</p></div>
+                   <div className="frase_informativa"><p> Visite nossa página produtos de produtos. E aproveite para comprar!</p></div>
                 </div>
               </div>
 

@@ -3,7 +3,7 @@
 export const usuarioAutenticado = () => localStorage.getItem('usuario-fastrade') !== null
 
 // Define a constante parseJwt
-export const parseJwt = () => {
+export const parseJwt  = () => {
     // Define a variável base64 que recebe o payload do token
     var base64 = localStorage.getItem('usuario-fastrade').split('.')[1]
 

@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import Logotipo from '../../assets/img/FONTE-1.png';
 import User from '../../assets/img/user.png';
 import Lupa from '../../assets/img/search.png';
@@ -10,11 +10,11 @@ import { usuarioAutenticado, parseJwt } from '../../services/auth';
 
 class cabecalho extends Component {
 
-    constructor(props){
+    constructor(props) {
         super(props);
-        
+
     }
-    
+
     logout = () => {
         // Remove o token do localStorage
         localStorage.removeItem("usuario-fastrade");
@@ -22,7 +22,7 @@ class cabecalho extends Component {
         // Redireciona para o endereço '/'
         this.props.history.push("/home");
     }
-
+       
     render() {
         return (
             <div>
@@ -40,29 +40,26 @@ class cabecalho extends Component {
 
                                 {usuarioAutenticado() ? (
                                     <>
-                                        <a href="index_comprador.html"><img src={User} alt="Entra em sua conta" /></a>
+                                        <a href="index_comprador.html"><img src={"http://localhost:5000/" + parseJwt().FotoUsuario} alt="Entra em sua conta" /></a>
                                         <a onClick={this.logout}>Sair</a>
 
                                     </>
                                 ) : (
-                                        <li><a href="produtos.html">PRODUTOS</a></li>
-
+                                        this.props.header
                                     )}
 
                             </div>
                         </div>
-
-                        <nav>
-                            <ul>
-                                <Link to="/Home">Home</Link>
-                                <li><a href="produtos.html">PRODUTOS</a></li>
-                                <Link to="/Dicas">Dicas</Link>
-                                <li><a href="Quem Somos .html">QUEM SOMOS</a></li>
-                            </ul>
-
-
-
-                        </nav>
+                        {
+                            <nav>
+                                <ul>
+                                    <Link to="/Home">Home</Link>
+                                    <li><a href="produtos.html">PRODUTOS</a></li>
+                                    <Link to="/Dicas">Dicas</Link>
+                                    <li><a href="Quem Somos .html">QUEM SOMOS</a></li>
+                                </ul>
+                            </nav>
+                        }
                     </div>
                 </header>
             </div>

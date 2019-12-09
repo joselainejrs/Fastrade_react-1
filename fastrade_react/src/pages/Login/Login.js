@@ -26,7 +26,7 @@ class Login extends Component {
         this.setState({ erroMensagem: '' })
 
         this.setState({ isLoading: true })
-
+        
         fetch("https://localhost:5001/api/login", {
             method: "POST",
             body: JSON.stringify(
