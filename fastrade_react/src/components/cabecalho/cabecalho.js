@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Logotipo from '../../assets/img/FONTE-1.png';
-import User from '../../assets/img/user.png';
 import Lupa from '../../assets/img/search.png';
 import '../../assets/css/cabecalho.css';
 import { Link } from 'react-router-dom';
@@ -29,10 +28,7 @@ class cabecalho extends Component {
                 <header>
                     <div className="container">
                         <div className="sub_menu">
-
-
                             <img src={Logotipo} alt="Logo do site" className="logo" />
-
                             <div className="pesquisa">
                                 <input type="text" placeholder="Busque aqui..." aria-label="Barra de busca" name="Barra_busca"
                                     className="txt_busca" />
