@@ -46,7 +46,6 @@ nav ul {
 nav a {
     text-decoration: none;
     color: #000000;
-    text-transform: uppercase;
     font-family: 'Dosis', sans-serif;
 }
 nav a:hover{
