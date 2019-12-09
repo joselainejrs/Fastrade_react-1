@@ -125,14 +125,14 @@ export default class PerfilComerciante extends Component {
     }
     render() {
         return (
-            <div className="cabeca">
-            <div className="barra_lateral">
-                <Link to="/PerfilComerciante" className="opcoes">Perfil</Link>
-                <Link to="/PerfilProduto" className="opcoes">Meu Produtos</Link>
-                <Link to="/" className="opcoes">Cadastrar Produtos</Link>
+            <div className="cabeca_perfil">
+            <div className="barra_lateral_perfil">
+                <Link to="/PerfilComerciante" className="opcoes_perfil">Perfil</Link>
+                <Link to="/PerfilProduto" className="opcoes_perfil">Meu Produtos</Link>
+                <Link to="/" className="opcoes_perfil">Cadastrar Produtos</Link>
             </div>
             <div className="conj_barra">
-                <div className="pri_barra">
+                <div className="pri_barra_perfil">
                     <div className="titulo_usuario">
                         <p>PERFIL DO USUÁRIO</p>
                     </div>
@@ -154,9 +154,9 @@ export default class PerfilComerciante extends Component {
                         <div className="usuario_perfil">
 
                             <form onSubmit="">
-                                <div className="item">
+                                <div className="item_perfil">
                                     <input
-                                        className="estilo_input"
+                                        className="estilo_input_perfil"
                                         placeholder="Razão Social"
                                         type="text"
                                         name="nome_razao_social"
@@ -164,9 +164,9 @@ export default class PerfilComerciante extends Component {
                                         value={this.state.nome_razao_social} />
                                 </div>
 
-                                <div className="item">
+                                <div className="item_perfil">
                                     <input
-                                        className="estilo_input"
+                                        className="estilo_input_perfil"
                                         placeholder="Email"
                                         type="text"
                                         name="email"
@@ -180,18 +180,18 @@ export default class PerfilComerciante extends Component {
                     <form id="conj_perfil">
                         <div className="dados_principais">
 
-                            <div className="item2">
+                            <div className="item_perfil2">
                                 <input
-                                    className="estilo_input"
+                                    className="estilo_input_perfil"
                                     placeholder="CNPJ"
                                     type="text"
                                     name="cpf_cnpj"
                                     onChange={this.handleCPF_CNPJChange}
                                     value={this.state.cpf_cnpj} />
                             </div>
-                            <div className="item2">
+                            <div className="item_perfil2">
                                 <input
-                                    className="estilo_input"
+                                    className="estilo_input_perfil"
                                     placeholder="Telefone para contato"
                                     type="text"
                                     name="celular_telefone"
@@ -200,9 +200,9 @@ export default class PerfilComerciante extends Component {
                             </div>
                         </div>
                         <div className="dados_principais">
-                            <div className="item2">
+                            <div className="item_perfil2">
                                 <input
-                                    className="estilo_dados"
+                                    className="estilo_dados_perfil"
                                     placeholder="Endereço:"
                                     type="text"
                                     name="rua_av"
@@ -210,19 +210,19 @@ export default class PerfilComerciante extends Component {
                                     value={this.state.rua_av} />
                             </div>
 
-                            <div className="item2">
+                            <div className="item_perfil2">
                                 <input
-                                    className="estilo_dados"
+                                    className="estilo_dados_perfil"
                                     placeholder="Complemento"
                                     type="text"
                                     name="complemento"
                                     onChange={this.handleComplementoChange}
                                     value={this.state.complemento} />
                             </div>
-                            <div className="item2">
+                            <div className="item_perfil2">
                                 <input
-                                    className="estilo_dados"
-                                    placeholder=" Numero"
+                                    className="estilo_dados_perfil"
+                                    placeholder="Numero"
                                     type="text"
                                     name="numero"
                                     onChange={this.handleNumeroChange}
@@ -231,27 +231,27 @@ export default class PerfilComerciante extends Component {
                         </div>
                         <div className="dados_principais">
 
-                            <div className="item2">
+                            <div className="item_perfil2">
                                 <input
-                                    className="estilo_dados"
+                                    className="estilo_dados_perfil"
                                     placeholder="CEP"
                                     type="text"
                                     name="cep"
                                     onChange={this.handleCEPChange}
                                     value={this.state.cep} />
                             </div>
-                            <div className="item2">
+                            <div className="item_perfil2">
                                 <input
-                                    className="estilo_dados"
+                                    className="estilo_dados_perfil"
                                     placeholder="Bairro"
                                     type="text"
                                     name="bairro"
                                     onChange={this.handleBairroChange}
                                     value={this.state.bairro} />
                             </div>
-                            <div className="item2">
+                            <div className="item_perfil2">
                                 <input
-                                    className="estilo_dados"
+                                    className="estilo_dados_perfil"
                                     placeholder="Estado"
                                     type="text"
                                     name="estado"
@@ -263,7 +263,7 @@ export default class PerfilComerciante extends Component {
                 </div>
 
 
-                <div className="botao_ficha">
+                <div className="botao_ficha_perfil">
                     <div >
                         <button
                             type="submit"

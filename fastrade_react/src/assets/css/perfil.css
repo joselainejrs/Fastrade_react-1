@@ -13,7 +13,7 @@
     --laranja:#BC3908;
     --branco:#FFFFFF;
 }
-.cabeca{
+.cabeca_perfil{
 	width: 1200px;
     background-color: white;
     margin: auto;
@@ -33,7 +33,7 @@
 	font-weight: bold;
 	font-family:'Dosis', sans-serif;
 }
-.barra_lateral{
+.barra_lateral_perfil{
 	margin:auto;
 	width:270px;
 	height:560px;
@@ -46,25 +46,23 @@
 	margin-top: 70px; 
 	margin-bottom: 70px; 
 }
-.opcoes{
+.opcoes_perfil{
 	font-family:'Dosis', sans-serif;
 	font-size: 30px;
 	padding: 15px;
 }
-a.opcoes{
+a.opcoes_perfil{
 	text-decoration: none;	
 	color:#BC3908	
 }
-a.opcoes:hover{
+a.opcoes_perfil:hover{
 	background-color:#BC3908;
 	color: white;
 }
-.pri_barra{	
+.pri_barra_perfil{	
 	width:830px;
 	margin: auto;
-	align-items: center;
-	
-		
+	align-items: center;	
 }
 .titulo_usuario{
 	font-family:'Dosis', sans-serif;
@@ -100,12 +98,13 @@ a.opcoes:hover{
 	align-items: center;
 	width: 600px;	
 }
-.item{
+.item_perfil{
 	margin:35px;
 }
-.estilo_input{
+.estilo_input_perfil{
 	border: 0;
 	width: 350px;
+	height: 20px;
 	border-bottom: 2px solid #BC3908;
 	border-left: 2px solid #BC3908;
 	border-right: 2px solid #BC3908;
@@ -115,13 +114,14 @@ a.opcoes:hover{
 	color: #808080;
 	text-align: left; 	
 }
-.item2{
+.item_perfil2{
 	margin:15px;
 	margin-left: 20px;	
 }
-.estilo_dados{	
+.estilo_dados_perfil{	
 	border: 0;
 	width: 220px;
+	height: 25px;
 	border-bottom: 2px solid #BC3908;
 	border-left: 2px solid #BC3908;
 	border-right: 2px solid #BC3908;
@@ -136,7 +136,7 @@ a.opcoes:hover{
 	display: flex;
 	align-content: space-between;
 }
-.botao_ficha{
+.botao_ficha_perfil{
 	border: solid 2px ;
 	border-radius: 20px;
 	color: #BC3908;
@@ -159,7 +159,7 @@ button.botao_perfil:hover{
 	color: white;
 	cursor: pointer; 
 }
-.botao_ficha:hover{
+.botao_ficha_perfil:hover{
 	background-color:#BC3908;
 	cursor: pointer; 
 

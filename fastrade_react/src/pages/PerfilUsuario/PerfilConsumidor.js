@@ -38,7 +38,7 @@ export default class PerfilConsumidor extends Component {
     componentDidMount() {
         console.log('Did');
 
-        localStorage.setItem("usuario_fastrade", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJBZG0gRG8gQ2hpcXVpbmhvIiwiZW1haWwiOiJBZG1ATGl2ZS5jb20iLCJqdGkiOiJhMmIwNmRhZS1lMTFhLTQyNjQtYWI3Yy1hMjEwOTFlODFjYzkiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIzIiwiUm9sZSI6IjMiLCJJZFVzdWFyaW8iOiIzIiwiSWRFbmRlcmVjbyI6IjEiLCJleHAiOjE1NzU2NjU2MzYsImlzcyI6ImZhc3RyYWRlLmNvbSIsImF1ZCI6ImZhc3RyYWRlLmNvbSJ9.v_UMgBmBw3L0ib8JXPk-DhcPglIhmCnQGtEc1--99LA");
+        localStorage.setItem("usuario-fastrade", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJBZG0gRG8gQ2hpcXVpbmhvIiwiZW1haWwiOiJBZG1ATGl2ZS5jb20iLCJqdGkiOiJhMmIwNmRhZS1lMTFhLTQyNjQtYWI3Yy1hMjEwOTFlODFjYzkiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIzIiwiUm9sZSI6IjMiLCJJZFVzdWFyaW8iOiIzIiwiSWRFbmRlcmVjbyI6IjEiLCJleHAiOjE1NzU2NjU2MzYsImlzcyI6ImZhc3RyYWRlLmNvbSIsImF1ZCI6ImZhc3RyYWRlLmNvbSJ9.v_UMgBmBw3L0ib8JXPk-DhcPglIhmCnQGtEc1--99LA");
         this.buscarUsuario();
 
         this.setState({id : parseJwt().idUsuario});
@@ -227,14 +227,14 @@ export default class PerfilConsumidor extends Component {
     render() {
         return (
 
-            <div className="cabeca">
-                <div className="barra_lateral">
-                    <Link to="/PerfilConsumidor" className="opcoes">
+            <div className="cabeca_perfil">
+                <div className="barra_lateral_perfil">
+                    <Link to="/PerfilConsumidor" className="opcoes_perfil">
                         Perfil
                         </Link>
                 </div>
                 <div className="conj_barra">
-                    <div className="pri_barra">
+                    <div className="pri_barra_perfil">
                         <div className="titulo_usuario">
                             <p>PERFIL DO USUÁRIO</p>
                         </div>
@@ -264,18 +264,18 @@ export default class PerfilConsumidor extends Component {
 
                             <div className="usuario_perfil">
                                 <form onSubmit={this.cadastrarPerfilConsumidor}>
-                                    <div className="item">
+                                    <div className="item_perfil">
                                         <input
-                                            className="estilo_input"
+                                            className="estilo_input_perfil"
                                             placeholder="Nome Completo"
                                             type="text"
                                             name="nomeRazaoSocial"
                                             onChange={this.handleNomeRazaoSocialChange}
                                             value={this.state.usuarioLogado.nomeRazaoSocial} />
                                     </div>
-                                    <div className="item">
+                                    <div className="item_perfil">
                                         <input
-                                            className="estilo_input"
+                                            className="estilo_input_perfil"
                                             placeholder="Email"
                                             type="text"
                                             name="email"
@@ -288,18 +288,18 @@ export default class PerfilConsumidor extends Component {
                         <form onSubmit={this.cadastrarPerfilConsumidor} >
                             <div className="dados_principais">
 
-                                <div className="item2">
+                                <div className="item_perfil2">
                                     <input
-                                        className="estilo_input"
+                                        className="estilo_input_perfil"
                                         placeholder="CPF"
                                         type="text"
                                         name="cpfCNPJ"
                                         onChange={this.handleCpfCnpjChange}
                                         value={this.state.usuarioLogado.cpfCnpj} />
                                 </div>
-                                <div className="item2">
+                                <div className="item_perfil2">
                                     <input
-                                        className="estilo_input"
+                                        className="estilo_input_perfil"
                                         placeholder="Telefone para contato"
                                         type="text"
                                         name="celular_telefone"
@@ -308,9 +308,9 @@ export default class PerfilConsumidor extends Component {
                                 </div>
                             </div>
                             <div className="dados_principais">
-                                <div className="item2">
+                                <div className="item_perfil2">
                                     <input
-                                        className="estilo_dados"
+                                        className="estilo_dados_perfil"
                                         placeholder="Endereço:"
                                         type="text"
                                         name="ruaAv"
@@ -318,19 +318,19 @@ export default class PerfilConsumidor extends Component {
                                         value={this.state.usuarioLogado.ruaAv} />
                                 </div>
 
-                                <div className="item2">
+                                <div className="item_perfil2">
                                     <input
-                                        className="estilo_dados"
+                                        className="estilo_dados_perfil"
                                         placeholder="Complemento"
                                         type="text"
                                         name="complemento"
                                         onChange={this.handleComplementoChange}
                                         value={this.state.usuarioLogado.complemento} />
                                 </div>
-                                <div className="item2">
+                                <div className="item_perfil2">
                                     <input
-                                        className="estilo_dados"
-                                        placeholder=" Numero"
+                                        className="estilo_dados_perfil"
+                                        placeholder="Numero"
                                         type="text"
                                         name="numero"
                                         onChange={this.handleNumeroChange}
@@ -339,27 +339,27 @@ export default class PerfilConsumidor extends Component {
                             </div>
                             <div className="dados_principais">
 
-                                <div className="item2">
+                                <div className="item_perfil2">
                                     <input
-                                        className="estilo_dados"
+                                        className="estilo_dados_perfil"
                                         placeholder="CEP"
                                         type="text"
                                         name="cep"
                                         onChange={this.handleCEPChange}
                                         value={this.state.usuarioLogado.cep} />
                                 </div>
-                                <div className="item2">
+                                <div className="item_perfil2">
                                     <input
-                                        className="estilo_dados"
+                                        className="estilo_dados_perfil"
                                         placeholder="Bairro"
                                         type="text"
                                         name="bairro"
                                         onChange={this.handleBairroChange}
                                         value={this.state.usuarioLogado.bairro} />
                                 </div>
-                                <div className="item2">
+                                <div className="item_perfil2">
                                     <input
-                                        className="estilo_dados"
+                                        className="estilo_dados_perfil"
                                         placeholder="Estado"
                                         type="text"
                                         name="estado"
@@ -367,7 +367,7 @@ export default class PerfilConsumidor extends Component {
                                         value={this.state.usuarioLogado.estado} />
                                 </div>
                             </div>
-                            <div className="botao_ficha">
+                            <div className="botao_ficha_perfil">
                                 <div >
                                     <button
                                         type="submit"

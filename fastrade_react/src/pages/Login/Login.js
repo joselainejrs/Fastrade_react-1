@@ -106,7 +106,7 @@ class Login extends Component {
                             <div className="conteudotodo">
                                 <label className="e-mail">
                                     <p className="login">Email</p>
-                                    <input name="email"
+                                    <input className="login" name="email"
                                         type="text" required className="caixa_cadastro"
                                         placeholder="exemplo@hotmail.com"
                                         arial-label="exemplo@hotmail.com"
@@ -116,7 +116,7 @@ class Login extends Component {
                             <div className="conteudotodo">
                                 <label>
                                     <p className="login">Senha</p>
-                                    <input name="Senha" type="password" required className="caixa_cadastro"
+                                    <input className="login" name="Senha" type="password" required className="caixa_cadastro"
                                         placeholder="Digite sua senha..."
                                         arial-label="Digite sua senha"
                                         onChange={this.atualizaSenha.bind(this)} />
