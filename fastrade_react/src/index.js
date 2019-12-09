@@ -27,6 +27,9 @@ import Farofa from './pages/Receitas/Farofa';
 import Creme from './pages/Receitas/Creme';
 import Pate from './pages/Receitas/Pate';
 import cadastroProduto from './pages/cadastroProduto/cadastroProduto';
+import PerfilComerciante from './pages/PerfilUsuario/PerfilComerciante';
+import PerfilConsumidor from './pages/PerfilUsuario/PerfilConsumidor';
+import PerfilProduto from './pages/PerfilUsuario/PerfilProduto';
 import Erro from './pages/paginaErro/Erro';
 
 import Login from'./pages/Login/Login';

@@ -35,7 +35,7 @@ button.botao{
 	font-size: 20px;
     font-weight: bold;
     border: 1px solid #BC3908;
-    border-radius: 7px;
+    border-radius: 15px;
     width: 100px;
 }
 button.botao:hover{
@@ -44,7 +44,6 @@ button.botao:hover{
    background-color: #BC3908;
 }
 .buttons-area{
-
     display: grid;
     grid-template-columns: 110px 120px;
     margin: auto;
@@ -63,6 +62,7 @@ button.botao:hover{
     grid-template-columns: 400px 300px 400px;
 }
 .card {
+    width: 1200px;
     background-color: white;
     padding: 80px 40px;
     margin: 40px 0px;
@@ -90,7 +90,7 @@ button.botao:hover{
  .card select{
     border: 0; 
     width: 300px;
-    height: 25px;
+    height: 46px;
 	border-bottom: 2px solid #BC3908;
 	border-left: 2px solid #BC3908;
 	border-right: 2px solid #BC3908;
