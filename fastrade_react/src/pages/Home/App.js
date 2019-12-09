@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Cabecalho from '../../components/cabecalho/cabecalho';
 
 //Aqui importamos imagens
 import logo_banner from '../../assets/img/logo_banner.png';
@@ -58,6 +59,7 @@ class App extends Component {
   render() {
     return (
       <div className="App" >
+        <Cabecalho/>
         <div className="tod_home">
           <div className="estrut_frase">
             <p className="frase_dicas">
@@ -66,12 +68,13 @@ class App extends Component {
             <Link to="/#" className="botao_dicas">Conheça nossa loja</Link>
           </div>
         </div>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+        <i class="fa fa-angle-double-down icone"></i>
         <main>
           <div className="container_oferta">
             <p className="oferte">Produtos em ofertas</p>
             <div className="conteudo">
-
-
               {
                 this.state.listaNomeOferta.map(
                   function (oferta) {
