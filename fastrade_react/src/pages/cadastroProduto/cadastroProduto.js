@@ -1,10 +1,5 @@
 import React, {Component} from 'react';
 import '../../assets/css/CadastroProduto.css';
-import {Link} from 'react-router-dom';
-
-
-
-
 
 class cadastroProduto extends Component{
     //Alteramos o estado de um elemento através do construtor 
