@@ -8,11 +8,16 @@
 .localicate {
     width: 100px;
     margin-right: 50px;
+   
 }
 
 .logo {
     width: 250px;
     height: 50px;
+}
+.contato{
+    font-size: 20px;
+    text-align: left;
 }
 
 .localizacao {
@@ -23,6 +28,7 @@
 }
 
 .todo {
+    width: 1200px;
     padding: 30px 0px;
     display: flex;
     justify-content: space-between;

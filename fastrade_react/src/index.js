@@ -9,7 +9,7 @@ import { Route, HashRouter as Router, Switch } from 'react-router-dom';
 // import './assets/css/cadastroProduto.css';
 import './assets/css/dicas.css';
 import './assets/css/receita.css';
-
+import './assets/css/pproduto.css';
 
 //importamos as paginas
 import App from './pages/Home/App';
@@ -32,12 +32,17 @@ import Brigadeiro from './pages/Receitas/Brigadeiro';
 
 import Creme from './pages/Receitas/Creme';
 
-
 import Pate from './pages/Receitas/Pate';
 
 import cadastroProduto from './pages/cadastroProduto/cadastroProduto';
 
 import Erro from './pages/paginaErro/Erro';
+
+import PerfilConsumidor from './pages/PerfilUsuario/PerfilConsumidor';
+
+import PerfilProduto from './pages/PerfilUsuario/PerfilProduto';
+
+import PerfilComerciante from './pages/PerfilUsuario/PerfilComerciante';
 
 
 
@@ -64,7 +69,9 @@ const Rotas = (
 				<Route path="/Dicas" component={Dicas} />
 				<Route path="/receitas" component={Receitas} />
 				<Route path="/cadastroProduto" component={cadastroProduto} />
-				<Route path="/cadastroProdutos" component={cadastroProduto} />
+				<Route path="/PerfilComerciante" component={PerfilComerciante} />
+            	<Route path="/PerfilConsumidor" component={PerfilConsumidor} />
+            	<Route path="/PerfilProduto" component={PerfilProduto} />
 				<Route component={Erro} />
 			</Switch>
 		</div>
