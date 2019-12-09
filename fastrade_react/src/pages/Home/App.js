@@ -45,14 +45,13 @@ class App extends Component {
     super();
     this.state = {
       listaNomeOferta: [],
-      listaImagem: []
 
     }
 
   }
   // temos uma lista atualizada onde escolhemos qual produto ira aparecer
   listaAtualizada = () => {
-    fetch("https://localhost:5001/api/oferta")
+    fetch("https://localhost:5001/api/oferta/")
       .then(response => response.json())
       .then(data => this.setState({ listaNomeOferta: data }));
   }
